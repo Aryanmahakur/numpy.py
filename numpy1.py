@@ -76,6 +76,24 @@ import numpy as np
 # print(f'changed np1{np1}')
 # print(f'original np2{np2}')
 
-np1 = np.array([1,2,3,4,5,6,7,8,9,10])
-print(np1)
-print(np1.shape)
+# np1 = np.array([1,2,3,4,5,6,7,8,9,10])
+# print(np1)
+# print(np1.shape)
+
+
+# np2 = np.array([[1,2,3,4,5,6], [7,8,9,10,11,12]])
+# print(np2) 
+# print(np2.reshape(3,4)) #2 rows and 6 columns
+# print(np2.shape) #2 rows and 5 columns
+# print(np2.reshape(5,2)) #5 rows and 2 columns
+# print(np2.reshape(1,10)) #1 row and 10 columns
+# print(np2.reshape(10,1)) #10 rows and 1 column
+# print(np2.ravel()) #converts 2D array to 1D array
+# print(np2.T) #transpose of the array
+# np4=np2.reshape(2,3,2)
+# print(np4)
+# print(np4.shape)
+# print(np4.ravel())
+# np5=np4.reshape(-1)
+# print(np5)
+# print(np5.shape)

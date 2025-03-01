@@ -1,4 +1,3 @@
-print(np2)
-# print(np2[0,1])
-# print(np2[1,2])
-# print(np2[0:1,1:3])
+print(np4)
+# print(np4.shape)
+# print(np4.ravel())
