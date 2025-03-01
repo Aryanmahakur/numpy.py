@@ -97,3 +97,29 @@ import numpy as np
 # np5=np4.reshape(-1)
 # print(np5)
 # print(np5.shape)
+# np1=np.array([1,2,3,4,5,6,7,8,9,10])
+# print(np1)
+# for x in np1:
+#     print(x)
+
+# np2=np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
+# print(np2)
+# for x in np2:
+#     #print rows
+#     print(x)
+#     for y in x:
+#         print(y)
+# np3=np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+# print(np3)
+# for x in np3:
+#     print(x)
+#     for y in x:
+#         print(y)
+#         for z in y:
+#             print(z)
+#use np.nditer()
+# for x in np.nditer(np3):
+#     print(x)
+np1=np.array([5,3,8,9,10])
+print(np.sort(np1))
+print(np1)
