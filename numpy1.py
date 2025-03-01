@@ -138,10 +138,29 @@ import numpy as np
 # print(np.sort(np5))
 # print(np5)
 # np6=np.array([[3,2,4,5,0,1,4],[7,4,9,10,11,12]])
-np6=np.array([1,2,3,4,5,6,7,8,9,10,4])
+# np6=np.array([1,2,3,4,5,6,7,8,9,10,4])
 # x=np.where(np6==4)
 # print(x)
 # print(np6[0])
-y=np.where(np6%2==0)
-print(y)
-print(np6[y])
+# y=np.where(np6%2==0)
+# print(y)
+# print(np6[y])
+# y=np.where(np6%2==1)
+# print(y)
+# print(np6[y])
+np7=np.array([1,2,3,4,5,6,7,8,9,10])
+# filtered=[]
+# for things in np7:
+#     if things%2==0:
+#         filtered.append(True) #True
+#     else:
+#         filtered.append(False) #False
+# print(np7)
+# print(filtered)
+# print(np7[filtered])
+filtered=np7%2==0
+print(np7)
+print(filtered)
+print(np7[filtered])
+
+
