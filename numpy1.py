@@ -163,4 +163,3 @@ print(np7)
 print(filtered)
 print(np7[filtered])
 
-
