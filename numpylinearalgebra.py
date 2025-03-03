@@ -1,142 +1,142 @@
 import numpy as np  # Importing NumPy
 
-# Dot product of two 1D arrays (vectors)
+# -----------------------------------------
+# Dot Product of Two 1D Arrays (Vectors)
+# -----------------------------------------
 np1 = np.array([1, 2, 3, 4, 5])
 np2 = np.array([6, 7, 8, 9, 10])
-np3 = np.dot(np1, np2)  # Computes the dot product of np1 and np2
-print(np3)
+dot_product = np.dot(np1, np2)
+print("Dot Product:", dot_product)
 
-# Matrix multiplication using multi_dot (efficient for multiple matrices)
+# --------------------------------------------------------
+# Matrix Multiplication using multi_dot (Efficient Method)
+# --------------------------------------------------------
+np3 = np.array([[1, 2, 3], [4, 5, 6]])
 np4 = np.array([[1, 2, 3], [4, 5, 6]])
-np5 = np.array([[1, 2, 3], [4, 5, 6]])
-np6 = np.linalg.multi_dot([np4, np5.T])  # Matrix multiplication of np4 and the transpose of np5
-print(np6)
+multi_dot_result = np.linalg.multi_dot([np3, np4.T])
+print("Matrix Multiplication:", multi_dot_result)
 
-# Distance of a point from the origin (Euclidean norm)
+# --------------------------------------------------
+# Euclidean Norm (Distance from Origin) and Distance
+# --------------------------------------------------
 point = np.array([1, 2, 3])
-distance = np.linalg.norm(point)
-print(distance)
+distance_origin = np.linalg.norm(point)
+print("Distance from Origin:", distance_origin)
 
-# Euclidean distance between two points in 3D space
 point1 = np.array([1, 2, 3])
 point2 = np.array([4, 5, 6])
-distance = np.linalg.norm(point1 - point2)  # Euclidean distance formula
-print(distance)
+euclidean_distance = np.linalg.norm(point1 - point2)
+print("Euclidean Distance:", euclidean_distance)
 
-# Scalar addition (element-wise)
+# -----------------------------
+# Element-wise Operations
+# -----------------------------
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
-c = a + b  # Element-wise addition
-print(c)
+print("Element-wise Addition:", a + b)
+print("Element-wise Subtraction:", a - b)
+print("Element-wise Multiplication:", a * b)
 
-# Scalar subtraction (element-wise)
-d = a - b  # Element-wise subtraction
-print(d)
+# ------------------------------------------
+# Cosine Similarity (Angle between Vectors)
+# ------------------------------------------
+dot_product_ab = np.dot(a, b)
+magnitudes = np.linalg.norm(a) * np.linalg.norm(b)
+cos_theta = dot_product_ab / magnitudes
+print("Cosine of Angle:", cos_theta)
 
-# Element-wise multiplication (Hadamard product)
-e = a * b
-print("Multiplication:", e)
+# -----------------------
+# Magnitude of a Vector
+# -----------------------
+magnitude_a = np.linalg.norm(a)
+print("Magnitude of Vector a:", magnitude_a)
 
-# Angle between two vectors (Cosine similarity)
-f = np.dot(a, b)  # Dot product
-g = np.linalg.norm(a) * np.linalg.norm(b)  # Magnitudes of a and b
-print(f / g)  # Cosine of the angle
-
-# Magnitude (norm) of a vector
-h = np.linalg.norm(a)  # Norm of vector a
-print(h)
-
-# Matrix addition
+# -----------------------
+# Matrix Operations
+# -----------------------
 mat1 = np.array([[1, 2, 3], [4, 5, 6]])
 mat2 = np.array([[7, 8, 9], [10, 11, 12]])
-mat3 = mat1 + mat2  # Element-wise addition
-print(mat3)
+print("Matrix Addition:", mat1 + mat2)
+print("Matrix Subtraction:", mat1 - mat2)
+print("Element-wise Matrix Multiplication:", mat1 * mat2)
 
-# Matrix subtraction
-mat4 = mat1 - mat2  # Element-wise subtraction
-print(mat4)
-
-# Element-wise matrix multiplication (not dot product)
-mat5 = mat1 * mat2  # Element-wise multiplication
-print(mat5)
-
-# Check if two matrices are orthogonal (dot product should be an identity matrix)
+# -------------------------------------------------
+# Checking Orthogonality of Matrices
+# (Dot Product should be an Identity Matrix)
+# -------------------------------------------------
 mat6 = np.array([[1, 0], [0, -1]])
 mat7 = np.array([[0, 1], [-1, 0]])
-mat8 = np.dot(mat6, mat7)  # Dot product
-print(mat8)
+orthogonality_check = np.dot(mat6, mat7)
+print("Orthogonality Check:", orthogonality_check)
 
-# Matrix transpose
-mattran = np.array([[1, 2, 3], [4, 5, 6]])
-mat9 = np.transpose(mattran)  # Transpose of matrix
-print(mat9)
+# -----------------------------
+# Matrix Transpose
+# -----------------------------
+mat_tran = np.array([[1, 2, 3], [4, 5, 6]])
+print("Matrix Transpose:", np.transpose(mat_tran))
 
-# Matrix inverse (only works for square, non-singular matrices)
+# -----------------------------
+# Matrix Inverse & Determinant
+# -----------------------------
 mat10 = np.array([[1, 2], [3, 4]])
-mat11 = np.linalg.inv(mat10)  # Inverse of matrix
-print(mat11)
+print("Matrix Inverse:", np.linalg.inv(mat10))
+print("Matrix Determinant:", np.linalg.det(mat10))
 
-# Matrix determinant (helps in checking if a matrix is invertible)
-matdet1 = np.array([[1, 2], [3, 4]])
-matdet2 = np.linalg.det(matdet1)  # Determinant of matdet1
-print(matdet2)
+# -----------------------------------
+# Determinant of a Singular Matrix
+# -----------------------------------
+mat_singular = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print("Determinant of Singular Matrix:", np.linalg.det(mat_singular))
 
-# Determinant of a 3x3 matrix (should be zero for a singular matrix)
-matdet3 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-mat4 = np.linalg.det(matdet3)  # Determinant
-print(mat4)
-
-# Check if two matrices are equal
+# -------------------------------
+# Matrix Equality Check
+# -------------------------------
 mat12 = np.array([[1, 2, 3], [4, 5, 6]])
 mat13 = np.array([[1, 2, 3], [4, 5, 6]])
-mat14 = np.array_equal(mat12, mat13)  # Returns True if matrices are identical
-print(mat14)
+print("Are Matrices Equal:", np.array_equal(mat12, mat13))
 
-# Scalar multiplication (each element multiplied by scalar)
-mat15 = np.array([[1, 2, 3], [4, 5, 6]])
-mat16 = 2 * mat15  # Each element multiplied by 2
-print(mat16)
+# -----------------------------
+# Scalar Multiplication
+# -----------------------------
+scalar_mat = 2 * mat12
+print("Scalar Multiplication:", scalar_mat)
 
-# Inverse of a matrix
-mat17 = np.array([[1, 2], [3, 4]])
-mat18 = np.linalg.inv(mat17)  # Compute inverse
-print(mat18)
+# -----------------------------
+# Rank of a Matrix
+# -----------------------------
+mat_rank = np.array([[1, 3, 5], [2, -1, 4], [-2, 8, 2]])
+print("Rank of Matrix:", np.linalg.matrix_rank(mat_rank))
 
-# Determinant of the inverse matrix
-a = np.linalg.det(mat18)  # Should be 1/det(original matrix)
-print(a)
-
-# Rank of a matrix (number of linearly independent rows or columns)
-mat19 = np.array([[1, 3, 5], [2, -1, 4], [-2, 8, 2]])
-mat20 = np.linalg.matrix_rank(mat19)  # Rank of the matrix
-print(mat20)
-
-#linear transformation
+# -----------------------------
+# Linear Transformation
+# -----------------------------
 mat21 = np.array([[1, 2], [3, 4]])
 mat22 = np.array([[1, 2], [3, 4]])
-mat23 = np.dot(mat21, mat22)  # Matrix multiplication
-print(mat23)
-#tensor
+print("Linear Transformation:", np.dot(mat21, mat22))
+
+# -----------------------------
+# Tensor Operations
+# -----------------------------
 tensor1 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
-print(tensor1)
+print("Tensor:", tensor1)
+print("Tensor Transpose:", np.transpose(tensor1, (1, 0, 2)))
 
-#transpose of a tensor
-tensor2 = np.transpose(tensor1, (1, 0, 2))
-print(tensor2)
-
-#eigen values and eigen vectors
-mat24 = np.array([[8,-8,-2], [4,-3,-2], [2,-4,1]])
+# --------------------------------
+# Eigenvalues and Eigenvectors
+# --------------------------------
+mat24 = np.array([[8, -8, -2], [4, -3, -2], [2, -4, 1]])
 eigenvalues, eigenvectors = np.linalg.eig(mat24)
 print("Eigenvalues:", eigenvalues)
 print("Eigenvectors:", eigenvectors)
 
-mat25 = np.array([[4,2], [1,3]])
+mat25 = np.array([[4, 2], [1, 3]])
 eigenvalues, eigenvectors = np.linalg.eig(mat25)
 print("Eigenvalues:", eigenvalues)
 print("Eigenvectors:", eigenvectors)
-#unit vector
-unit_vector = np.array([3,4])
+
+# -------------------------------
+# Unit Vector Normalization
+# -------------------------------
+unit_vector = np.array([3, 4])
 normalized_vector = unit_vector / np.linalg.norm(unit_vector)
-print("Normalized vector:", normalized_vector)
-
-
+print("Normalized Vector:", normalized_vector)
