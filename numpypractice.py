@@ -94,3 +94,32 @@ for x in np3:
         print(y)
         for z in y:
             print(z)
+#using np.nditer() to iterate over numpy arrays
+
+for x in np.nditer(np3):
+    print(x)
+
+#sorting numpy arrays
+np1=np.array([5, 3, 8, 9, 10])
+print(np.sort(np1))
+print(np1)
+
+np2=np.array(["banana", "cherry", "apple", "mango"])
+print(np.sort(np2))
+
+np3=np.array([True, False, True, False])
+print(np.sort(np3))
+
+np4=np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(np4))
+
+#finding positions of elements
+np1=np.array([1, 2, 3, 4, 5])
+x=np.where(np1==3)
+print(x)
+y=np.where(np1%2==0)
+print(y)
+print(np1[y])
+y=np.where(np1%2==1)
+print(y)
+print(np1[y])   
