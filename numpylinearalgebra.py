@@ -135,6 +135,21 @@ print("Eigenvalues:", eigenvalues)
 print("Eigenvectors:", eigenvectors)
 
 # -------------------------------
+# Adjoint of a Matrix
+# -------------------------------
+
+
+# Define the matrix
+mat26 = np.array([[1, 2, 3], [-1, 2, 5], [4, 3, 1]])
+
+# Compute the cofactor matrix
+cofactor_matrix = np.linalg.inv(mat26).T * np.linalg.det(mat26)
+
+# Print the adjugate matrix (which is the transpose of the cofactor matrix)
+print("Adjoint of Matrix:\n", cofactor_matrix)
+transpose_matrix = np.transpose(cofactor_matrix)
+print("Transpose of Matrix:\n", transpose_matrix)
+# -------------------------------
 # Unit Vector Normalization
 # -------------------------------
 unit_vector = np.array([3, 4])
