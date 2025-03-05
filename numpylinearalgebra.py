@@ -155,3 +155,4 @@ print("Transpose of Matrix:\n", transpose_matrix)
 unit_vector = np.array([3, 4])
 normalized_vector = unit_vector / np.linalg.norm(unit_vector)
 print("Normalized Vector:", normalized_vector)
+dd
